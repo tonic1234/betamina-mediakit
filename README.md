@@ -95,6 +95,17 @@ WideSemiboldItalic; en `assets/tipografia/` están todos los pesos y variantes.
   capturas del proceso de diseño que no son assets de marca (versiones previas de las tarjetas de
   paleta y gradiente, un placeholder «Mediakit» y una captura de una plantilla de FAQ genérica).
 
+## Cómo se sirve (rendimiento)
+
+- **Tipografías e imágenes** (`*.otf`, `*.ttf`, `*.png`, `*.webp`, `*.css`, `*.json`): `Cache-Control:
+  public, max-age=1209600` (14 días). **HTML y ZIP**: `no-cache, must-revalidate`, así el visitante
+  nunca ve una versión vieja de la página ni un ZIP viejo.
+- **La tipografía del titular se pide con `preload`** en la primera línea del `<head>` y sus caras de
+  display usan `font-display: block`: mientras baja el archivo, el titular no se pinta (queda el
+  espacio) en lugar de dibujarse con la fuente de reserva. Sin esto, en la primera visita el titular
+  aparecía un instante en **Impact** (la fuente de reserva que resuelve Windows) y recién después
+  cambiaba a FT Calhern.
+
 ## Créditos
 
 Diseño y desarrollo: **Dendra**. Los assets de marca pertenecen a Betamina.
