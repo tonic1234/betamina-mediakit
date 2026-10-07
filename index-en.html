@@ -3,33 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- La tipografia del titular: se pide antes que cualquier otra cosa, si no el titular
+       se dibuja un instante con la fuente de reserva (Impact en Windows). -->
+  <link rel="preload" as="font" type="font/otf" href="assets/tipografia/mox3ccjl-FTCalhern-WideBoldItalic.otf" crossorigin />
   <title>Mediakit — Betamina</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
-  <!-- Preload de la tipografia del titular: sin esto, los primeros ~1,2 s se dibuja con la fuente de reserva (Impact) -->
-  <link rel="preload" as="font" type="font/otf" href="assets/tipografia/mox3ccjl-FTCalhern-WideBoldItalic.otf" crossorigin />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <style>
     @font-face {
       font-family: 'FT Calhern Wide';
       src: url('assets/tipografia/mox3ccjl-FTCalhern-WideBold.otf') format('opentype');
-      font-weight: 700; font-style: normal; font-display: swap;
+      font-weight: 700; font-style: normal; font-display: block;
     }
     @font-face {
       font-family: 'FT Calhern Wide';
       src: url('assets/tipografia/mox3ccjl-FTCalhern-WideBoldItalic.otf') format('opentype');
-      font-weight: 700; font-style: italic; font-display: swap;
+      font-weight: 700; font-style: italic; font-display: block;
     }
     @font-face {
       font-family: 'FT Calhern Wide';
       src: url('assets/tipografia/mox3ccju-FTCalhern-WideSemibold.otf') format('opentype');
-      font-weight: 600; font-style: normal; font-display: swap;
+      font-weight: 600; font-style: normal; font-display: block;
     }
     @font-face {
       font-family: 'FT Calhern Wide';
       src: url('assets/tipografia/mox3ccju-FTCalhern-WideSemiboldItalic.otf') format('opentype');
-      font-weight: 600; font-style: italic; font-display: swap;
+      font-weight: 600; font-style: italic; font-display: block;
     }
 
     :root {
