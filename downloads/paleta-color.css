@@ -1,0 +1,97 @@
+/* ====================================
+   Betamina Brand Palette — CSS Tokens
+   Version 3.2 — Mayo 2026
+   ==================================== */
+
+:root {
+  /* --- Brand Book Colors --- */
+  --brand-blue-primary:   #0068F9;  /* Pantone 2727 C */
+  --brand-blue-secondary: #0048C5;  /* Pantone 293 C  */
+  --brand-blue-tertiary:  #0039AC;  /* Pantone 294 C  */
+  --brand-white:          #FFFFFF;
+  --brand-light-gray:     #E2E2E2;  /* Cool Gray 1 C */
+
+  /* --- System Semantic Tokens --- */
+  --bg:              #010439;  /* Deep navy — page background */
+  --surface:         #00173A;  /* Navy surface — sections */
+  --surface-alt:     #000E29;  /* Alternate navy surface */
+  --fg:              #FFFFFF;  /* Primary text on dark */
+  --fg-body:         #D5DEE5;  /* Body text */
+  --muted:           #525252;  /* Caption / muted text */
+  --border:          #002e75;  /* Subtle borders */
+  --accent:          #00B4FC;  /* Cyan accent */
+  --accent-hover:    #9831fd;  /* Purple hover */
+
+  /* --- Semantic States --- */
+  --color-success:   #40BC95;  /* Success green */
+  --color-error:     #E73F3F;  /* Error red */
+
+  /* --- Gradients --- */
+  --hero-gradient:   linear-gradient(60deg, #0A448C 40%, #0E65F0);
+  --btn-gradient:    linear-gradient(45deg, #0068F9, #00B4FC, #9831fd);
+
+  /* Gradient raw values for export */
+  --gradient-start:  #0A448C;
+  --gradient-end:    #0E65F0;
+}
+
+/* --- Typography --- */
+:root {
+  --font-display: 'FT Calhern Wide', 'Oswald', 'Impact', 'Arial Narrow', sans-serif;
+  --font-body:    'Prompt', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:    'JetBrains Mono', 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+}
+
+/* --- Spacing --- */
+:root {
+  --separator-y:  clamp(5rem, 8vh, 14rem);
+  --separator-x:  clamp(1.8rem, 4.86vw, 7.5rem);
+  --sections-br:  clamp(3rem, 4vw, 5rem);
+  --tap-size:     4.8rem;
+  --header-h:     5.6rem;
+  --wrapper:      168rem;
+}
+
+/* --- Button Base --- */
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8em;
+  font-family: var(--font-body);
+  font-size: clamp(1.5rem, 1.11vw, 1.7rem);
+  font-weight: 500;
+  color: var(--fg);
+  text-decoration: none;
+  background: var(--btn-gradient);
+  background-size: 300% 300%;
+  background-position: 0% 50%;
+  border: none;
+  border-radius: 2em;
+  padding: 0.85em 1.3em;
+  min-height: 4.8rem;
+  cursor: pointer;
+  box-shadow: 0 1.3em 1.3em -1em hsl(0 0% 0% / 25%);
+  transition:
+    background 350ms ease-out,
+    background-position 350ms ease-out,
+    transform 250ms ease-out,
+    box-shadow 250ms ease-out;
+}
+
+.c-btn:hover {
+  background-position: 100% 50%;
+  transform: translateY(-2px);
+  box-shadow: 0 1.6em 1.6em -1em hsl(0 0% 0% / 28%);
+}
+
+.c-btn--stroke {
+  background: transparent;
+  border: 2px solid var(--accent);
+  box-shadow: none;
+}
+
+.c-btn--stroke:hover {
+  border-color: var(--accent-hover);
+  background: var(--accent-hover);
+}

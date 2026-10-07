@@ -1,0 +1,65 @@
+{
+  "name": "Betamina Brand Palette",
+  "version": "3.2",
+  "updated": "2026-05",
+  "palette": {
+    "brand": {
+      "primaryBlue":    { "hex": "#0068F9", "pantone": "2727 C", "role": "Primary brand blue" },
+      "secondaryBlue":  { "hex": "#0048C5", "pantone": "293 C",  "role": "Hover, active, deep surfaces" },
+      "tertiaryBlue":   { "hex": "#0039AC", "pantone": "294 C",  "role": "Nav surfaces, deep accents" },
+      "white":          { "hex": "#FFFFFF", "pantone": "—",       "role": "Text on dark, button text" },
+      "lightGray":      { "hex": "#E2E2E2", "pantone": "Cool Gray 1 C", "role": "Borders, light separators" }
+    },
+    "system": {
+      "navyDeep":       { "hex": "#010439", "role": "Page background (bg)" },
+      "navySurface":    { "hex": "#00173A", "role": "Section surface" },
+      "navyAlt":        { "hex": "#000E29", "role": "Alternate surface" },
+      "cyanAccent":     { "hex": "#00B4FC", "role": "Gradient endpoint, accent elements" },
+      "purpleHover":    { "hex": "#9831fd", "role": "Universal hover state" },
+      "successGreen":   { "hex": "#40BC95", "role": "Success, confirmation" },
+      "errorRed":       { "hex": "#E73F3F", "role": "Error, destructive actions" },
+      "midBlue":        { "hex": "#3889FA", "role": "Mid-blue accent, pattern" },
+      "bodyText":       { "hex": "#D5DEE5", "role": "Body text on dark backgrounds" },
+      "mutedGray":      { "hex": "#525252", "role": "Muted/caption text" }
+    }
+  },
+  "gradient": {
+    "hero": {
+      "css": "linear-gradient(60deg, #0A448C 40%, #0E65F0)",
+      "start": { "hex": "#0A448C", "role": "Hero gradient start" },
+      "end":   { "hex": "#0E65F0", "role": "Hero gradient end" }
+    },
+    "button": {
+      "css": "linear-gradient(45deg, #0068F9, #00B4FC, #9831fd)",
+      "stops": [
+        { "hex": "#0068F9", "position": "0%", "role": "Primary blue" },
+        { "hex": "#00B4FC", "position": "50%", "role": "Cyan accent" },
+        { "hex": "#9831fd", "position": "100%", "role": "Purple hover" }
+      ],
+      "backgroundSize": "300% 300%",
+      "animation": "background-position 350ms ease-out"
+    }
+  },
+  "cssTokens": {
+    "--brand-blue-primary":   "#0068F9",
+    "--brand-blue-secondary": "#0048C5",
+    "--brand-blue-tertiary":  "#0039AC",
+    "--brand-white":          "#FFFFFF",
+    "--brand-light-gray":     "#E2E2E2",
+    "--bg":                   "#010439",
+    "--surface":              "#00173A",
+    "--surface-alt":          "#000E29",
+    "--fg":                   "#FFFFFF",
+    "--fg-body":              "#D5DEE5",
+    "--muted":                "#525252",
+    "--border":               "#002e75",
+    "--accent":               "#00B4FC",
+    "--accent-hover":         "#9831fd",
+    "--color-success":        "#40BC95",
+    "--color-error":          "#E73F3F",
+    "--gradient-start":       "#0A448C",
+    "--gradient-end":         "#0E65F0",
+    "--btn-gradient":         "linear-gradient(45deg, #0068F9, #00B4FC, #9831fd)",
+    "--hero-gradient":        "linear-gradient(60deg, #0A448C 40%, #0E65F0)"
+  }
+}
